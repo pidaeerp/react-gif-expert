@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 //import { getGifts } from "../helpers/getGifts";
 import { GifItem } from "./GifItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
+import PropTypes from "prop-types";
 
 export const GifGrid = ({ category }) => {
   //// const [counter, setCounter] = useState(10);
@@ -34,4 +35,8 @@ export const GifGrid = ({ category }) => {
       <button onClick={() => setCounter(counter + 1)}>+1</button> */}
     </Fragment>
   );
+};
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
 };
